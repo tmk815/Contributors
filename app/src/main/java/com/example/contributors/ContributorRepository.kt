@@ -17,4 +17,12 @@ class ContributorRepository {
 
     suspend fun getContributorList(): Response<List<Contributor>> =
         githubService.getContributorList()
+
+    //singletonでRepositoryインスタンスを返す
+    companion object Factory {
+        val instance: ContributorRepository
+            @Synchronized get() {
+                return ContributorRepository()
+            }
+    }
 }
