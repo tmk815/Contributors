@@ -1,6 +1,6 @@
 package com.example.contributors.model
 
-data class Contributors(
+data class Contributor(
     val avatar_url: String,
     val contributions: Int,
     val events_url: String,
