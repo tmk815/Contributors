@@ -47,7 +47,7 @@ class ContributorDetailFragment : Fragment(){
             if (contributorDetail != null) {
 
                 binding.isLoading = false
-                viewModel.setPContributorDetail(contributorDetail)
+                viewModel.setContributorDetail(contributorDetail)
             }
         })
     }
