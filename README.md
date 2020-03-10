@@ -6,3 +6,4 @@ Android Architecture Components samplesのContributorを取得するアプリケ
 [【Android】Databinding × レイアウトファイル(XML)で文字列を結合しつつ表示させる](https://qiita.com/rm__rf/items/05f63b6ef2b296a555c5)  
 [ImageViewを丸くする](https://qiita.com/furusin_oriver/items/16222897fac2b6a1496c)  
 [【Android】picassoでURLから画像をよしなに扱う【Kotlin】](https://wrongwrong163377.hatenablog.com/entry/2018/09/09/165250)  
+[AndroidをKotlin+MVVM+Dagger2ではじめるための資料集](https://qiita.com/d_forest/items/6a2903c41a3ce02b99ae)
