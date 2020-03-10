@@ -1,6 +1,7 @@
 package com.example.contributors
 
 import com.example.contributors.model.Contributor
+import com.example.contributors.model.ContributorDetail
 import com.example.contributors.model.IGitHubService
 import com.example.contributors.model.IGitHubService.Companion.GITHUB_API_URL
 import retrofit2.Response
@@ -17,6 +18,9 @@ class ContributorRepository {
 
     suspend fun getContributorList(): Response<List<Contributor>> =
         githubService.getContributorList()
+
+    suspend fun getContributorDetails(userID: String): Response<ContributorDetail> =
+        githubService.getContributorDetails(userID)
 
     //singletonでRepositoryインスタンスを返す
     companion object Factory {

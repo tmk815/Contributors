@@ -13,5 +13,5 @@ interface IGitHubService {
     suspend fun getContributorList(): Response<List<Contributor>>
 
     @GET("/users/{user}")
-    suspend fun getContributorDetails(@Path("user") user: String): Response<Contributor>
+    suspend fun getContributorDetails(@Path("user") user: String): Response<ContributorDetail>
 }
