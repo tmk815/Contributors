@@ -29,15 +29,6 @@
             android:orientation="vertical"
             app:visibleGone="@{!isLoading}">
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:textStyle="bold"
-                android:layout_marginTop="20dp"
-                android:layout_marginBottom="20dp"
-                android:textAlignment="center"/>
-
             <androidx.recyclerview.widget.RecyclerView
                 android:id="@+id/contributor_list"
                 android:layout_width="match_parent"
