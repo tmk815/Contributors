@@ -18,11 +18,11 @@ import com.example.contributors.adapter.ContributorAdapter
 import com.example.contributors.databinding.FragmentContributorListBinding
 import com.example.contributors.model.Contributor
 import com.example.contributors.viewmodel.ContributorListViewModel
-import com.squareup.picasso.Picasso
-
 
 class ContributorListFragment : Fragment() {
-    private val viewModel by lazy { ViewModelProviders.of(this).get(ContributorListViewModel::class.java) }
+    private val viewModel by lazy {
+        ViewModelProviders.of(this).get(ContributorListViewModel::class.java)
+    }
 
     private lateinit var binding: FragmentContributorListBinding
     private lateinit var contributorAdapter: ContributorAdapter
@@ -35,15 +35,13 @@ class ContributorListFragment : Fragment() {
         }
     }
 
-    @BindingAdapter("loadImg")
-    fun setImage(view: ImageView, url: String?) {
-        Picasso.get().load(url).into(view)
-    }
-
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         //dataBinding用のレイアウトリソース
-        binding = DataBindingUtil.inflate(inflater, R.layout.fragment_contributor_list, container, false)
+        binding =
+            DataBindingUtil.inflate(inflater, R.layout.fragment_contributor_list, container, false)
 
         contributorAdapter = ContributorAdapter(contributorClickCallback)
 
@@ -63,7 +61,7 @@ class ContributorListFragment : Fragment() {
 
     //observe開始
     private fun observeViewModel(viewModel: ContributorListViewModel) {
-        
+
         viewModel.contributorListLiveData.observe(viewLifecycleOwner, Observer { contributors ->
             if (contributors != null) {
                 binding.isLoading = false
