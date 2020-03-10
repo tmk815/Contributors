@@ -27,7 +27,7 @@ class ContributorListFragment : Fragment() {
     private val contributorClickCallback = object : ContributorClickCallback {
         override fun onClick(contributor: Contributor) {
             if (lifecycle.currentState.isAtLeast(Lifecycle.State.STARTED) && activity is MainActivity) {
-                //(activity as MainActivity).show(contributor)
+                (activity as MainActivity).show(contributor)
             }
         }
     }

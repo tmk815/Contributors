@@ -17,7 +17,7 @@ class ContributorDetailViewModel (
     val contributorDetailLiveData: MutableLiveData<ContributorDetail> = MutableLiveData()
 
     var contributorDetail = ObservableField<ContributorDetail>()
-    
+
     init {
         loadContributorDetail()
     }
@@ -38,7 +38,7 @@ class ContributorDetailViewModel (
     fun setProject(contributorDetail: ContributorDetail) {
         this.contributorDetail.set(contributorDetail)
     }
-
+    
     class Factory(private val application: Application,private val userID: String) : ViewModelProvider.NewInstanceFactory() {
         @Suppress("UNCHECKED_CAST")
         override fun <T : ViewModel> create(modelClass: Class<T>): T {
