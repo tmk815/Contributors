@@ -1,3 +1,14 @@
 <resources>
     <string name="app_name">Contributors</string>
+    <string name="loading">Loading...</string>
+    <string name="id">ID:</string>
+    <string name="name">Name:</string>
+    <string name="company">Company:</string>
+    <string name="location">Location:</string>
+    <string name="email">email:</string>
+    <string name="bio">Bio:</string>
+    <string name="public_repos">PublicRepos:</string>
+    <string name="public_gists">PublicGists:</string>
+    <string name="followers">Followers:</string>
+    <string name="following">Following:</string>
 </resources>

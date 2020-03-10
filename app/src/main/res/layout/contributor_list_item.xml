@@ -18,22 +18,24 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="5dp"
-            android:orientation="vertical">
+            android:orientation="horizontal">
 
-            <ImageView
+            <de.hdodenhof.circleimageview.CircleImageView
                 android:scaleType="centerCrop"
-                app:loadImg="@{contributor.avatar_url}"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent" />
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                app:loadImage="@{contributor.avatar_url}"/>
 
             <TextView
                 android:id="@+id/name"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textStyle="bold"
+                android:paddingLeft="5dp"
+                android:layout_gravity="center_vertical"
                 android:text="@{contributor.login}"/>
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>
+
 </layout>
