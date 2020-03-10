@@ -30,7 +30,7 @@ class ContributorDetailViewModel (
                     contributorDetailLiveData.postValue(contributorDetail.body())
                 }
             } catch (e: Exception) {
-                Log.e("loadProject:Failed", e.stackTrace.toString())
+                Log.e("loadContributorDetail:Failed", e.stackTrace.toString())
             }
         }
     }
