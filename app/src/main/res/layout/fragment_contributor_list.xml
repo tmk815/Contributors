@@ -15,11 +15,12 @@
         tools:ignore="PrivateResource">
 
         <TextView
-            android:id="@+id/loading_contributor"
+            android:id="@+id/loading_project"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:gravity="center_vertical|center_horizontal"
             android:textAlignment="center"
+            android:text="@string/loading"
             app:visibleGone="@{isLoading}"/>
 
         <LinearLayout
@@ -47,4 +48,5 @@
         </LinearLayout>
 
     </LinearLayout>
+
 </layout>

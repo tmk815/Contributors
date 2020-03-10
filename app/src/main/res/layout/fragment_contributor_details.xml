@@ -1,6 +1,112 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:layout_height="match_parent">
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable name="isLoading" type="boolean" />
+        <variable name="contributorDetailViewModel" type="com.example.contributors.viewmodel.ContributorDetailViewModel"/>
+    </data>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/loading_project"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|center_horizontal"
+            android:textAlignment="center"
+            android:text="@string/loading"
+            app:visibleGone="@{isLoading}"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center_vertical|center_horizontal"
+            android:padding="5dp"
+            android:orientation="vertical"
+            app:visibleGone="@{!isLoading}">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:scaleType="centerCrop"
+                android:layout_width="96dp"
+                android:layout_height="96dp"
+                app:loadImage="@{contributorDetailViewModel.contributorDetail.avatar_url}"/>
+
+            <TextView
+                android:id="@+id/name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="@{@string/name + contributorDetailViewModel.contributorDetail.name}"/>
+
+            <TextView
+                android:id="@+id/login"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="@{@string/id + contributorDetailViewModel.contributorDetail.login}"/>
+
+            <TextView
+                android:id="@+id/company"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="@{@string/company + contributorDetailViewModel.contributorDetail.company}"/>
+
+            <TextView
+                android:id="@+id/location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="@{@string/location + contributorDetailViewModel.contributorDetail.location}"/>
+
+            <TextView
+                android:id="@+id/email"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="@{@string/email + contributorDetailViewModel.contributorDetail.email}"/>
+
+            <TextView
+                android:id="@+id/bio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="@{@string/bio + contributorDetailViewModel.contributorDetail.bio}"/>
+
+            <TextView
+                android:id="@+id/public_repos"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="@{@string/public_repos + contributorDetailViewModel.contributorDetail.public_repos}"/>
+
+            <TextView
+                android:id="@+id/public_gists"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="@{@string/public_gists + contributorDetailViewModel.contributorDetail.public_gists}"/>
+
+            <TextView
+                android:id="@+id/followers"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="@{@string/followers + contributorDetailViewModel.contributorDetail.followers}"/>
+
+            <TextView
+                android:id="@+id/following"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textStyle="bold"
+                android:text="@{@string/following + contributorDetailViewModel.contributorDetail.following}"/>
+
+        </LinearLayout>
+
+    </FrameLayout>
+
+</layout>
