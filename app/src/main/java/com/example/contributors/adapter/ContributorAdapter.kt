@@ -15,7 +15,7 @@ class ContributorAdapter(private val projectClickCallback: ContributorClickCallb
 
     private var contributorList: List<Contributor>? = null
 
-    fun setProjectList(contributorList: List<Contributor>) {
+    fun setContributorList(contributorList: List<Contributor>) {
 
         if (this.contributorList == null) {
             this.contributorList = contributorList
