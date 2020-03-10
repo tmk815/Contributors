@@ -19,6 +19,7 @@ class MainActivity : AppCompatActivity() {
         if (savedInstanceState == null) {
             val fragment = ContributorListFragment()
 
+            // コントリビューターを表示するフラグメントの開始
             supportFragmentManager
                 .beginTransaction()
                 .add(R.id.fragment_container, fragment, CONTRIBUTOR_LIST_FRAGMENT)
@@ -26,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
 
-    //詳細画面への遷移
+    // 詳細画面への遷移
     fun show(contributor: Contributor) {
         val contributorDetailFragment = ContributorDetailFragment.forContributor(contributor.login)
 

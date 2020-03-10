@@ -59,9 +59,7 @@ class ContributorListFragment : Fragment() {
         observeViewModel(viewModel)
     }
 
-    //observe開始
     private fun observeViewModel(viewModel: ContributorListViewModel) {
-
         viewModel.contributorListLiveData.observe(viewLifecycleOwner, Observer { contributors ->
             if (contributors != null) {
                 binding.isLoading = false
