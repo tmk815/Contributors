@@ -21,9 +21,9 @@
             android:padding="5dp"
             android:orientation="vertical">
 
-            <TextView
-                app:text="@{contributor.avatar_url}"
+            <ImageView
                 android:scaleType="centerCrop"
+                app:loadImg="@{contributor.avatar_url}"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 
