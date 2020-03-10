@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
         supportFragmentManager
             .beginTransaction()
             .addToBackStack("contributor")
-            .replace(R.id.fragment_container, contributorDetailFragment, null)
+            .replace(R.id.fragment_container, contributorDetailFragment,null)
             .commit()
     }
 }

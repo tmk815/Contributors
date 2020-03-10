@@ -35,7 +35,7 @@ class ContributorDetailViewModel (
         }
     }
 
-    fun setProject(contributorDetail: ContributorDetail) {
+    fun setPContributorDetail(contributorDetail: ContributorDetail) {
         this.contributorDetail.set(contributorDetail)
     }
     
